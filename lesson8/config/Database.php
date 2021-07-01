@@ -5,16 +5,10 @@ class Database {
 	const DB_HOST = 'localhost';
 	const DB_USER = 'root';
 	const DB_PASSWORD = '';
-	const DB_NAME = 'tm_blog';
+	const DB_NAME = 'tm';
 	protected $sql_db;
 	public function __construct() {
 		$this -> sql_db = new mysqli(self::DB_HOST, self::DB_USER, self::DB_PASSWORD, self::DB_NAME);
-		if($this -> sql_db -> connect_error) {
-			die($this -> sql_db -> connect_error)
-		} else {
-			echo "Connected";
-		}
+		
 	}
 }
-
-$ob  = new Databasel;
